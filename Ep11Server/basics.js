@@ -13,3 +13,8 @@
 // servers are also more cost-effective and can save us money in the long run
 // servers are also more flexible and can be customized to meet our specific needs
 
+const http = require('http');
+const server = http.createServer(function (req, res) {
+    res.end('Hello World');
+});
+server.listen(3001);
