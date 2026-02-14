@@ -15,6 +15,10 @@
 
 const http = require('http');
 const server = http.createServer(function (req, res) {
-    res.end('Hello World');
+    if (req.url === '/getSecretData') {
+        res.end('Secret Data: This is sensitive information.');
+    } else {
+        res.end('Hello World');
+    }
 });
 server.listen(3001);
